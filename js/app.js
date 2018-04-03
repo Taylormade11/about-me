@@ -42,6 +42,12 @@ if (catsGuess === "no") {
   alert("Wrong! 1 strike for you! Only " + (remainingStrikes - strikesCounter) + " left!");
 }
 
+// Error catch for possible loss? Not sure how to do this in a better way.
+
+if (strikesCounter >= 3) {
+  alert(strikesCounter + " strikes, you lose! Let's finish the rest of the 5 questions just for fun anyways :) ")
+} 
+
 // Do you think I have lived in Seattle before?
 
 var seattleGuess = prompt("Do you think I have lived in Seattle before?").toLowerCase();
@@ -54,6 +60,13 @@ if (seattleGuess === "yes") {
   alert("Wrong! 1 strike for you! Only " + (remainingStrikes - strikesCounter) + " left!");
 }
 
+// Error catch for possible loss? Not sure how to do this in a better way.
+
+if (strikesCounter >= 3) {
+  alert(strikesCounter + " strikes, you lose! Let's finish the rest of the 5 questions just for fun anyways :) ")
+} 
+
+
 // Do you think I eat a banana every day?
 
 var trekGuess = prompt("Do you think I eat a banana every day?").toLowerCase();
@@ -64,4 +77,10 @@ if (trekGuess === "no") {
 } else {
   strikesCounter += 1;
   alert("Wrong! 1 strike for you! Only " + (remainingStrikes - strikesCounter) + " left!");
+}
+
+if (strikesCounter > pointsCounter) {
+  alert("You lose! Maybe next time!")
+} else {
+  alert("Great job! You know me too well! I just can't fool you, next time I'll try to think of some tougher questions!")
 }
