@@ -69,9 +69,9 @@ if (strikesCounter >= 3) {
 
 // Do you think I eat a banana every day?
 
-var trekGuess = prompt("Do you think I eat a banana every day?").toLowerCase();
+var bananaGuess = prompt("Do you think I eat a banana every day?").toLowerCase();
 
-if (trekGuess === "no") {
+if (bananaGuess === "no") {
   pointsCounter += 1;
   alert("Correct! I can't eat a banana without yacking! I drink 1 every day! 1 point for you! You have " + pointsCounter + " points, keep it up!")
 } else {
