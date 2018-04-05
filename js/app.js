@@ -53,15 +53,15 @@ if (catsGuess === 'no') {
   console.log('Correct! I hate cats!');
 } else {
   strikesCounter += 1;
-  alert('Incorrect! I hate cats! ' + strikesCounter + ' strike(s) for you! Only ' + (remainingStrikes - strikesCounter) +  'left!');
+  alert('Incorrect! I hate cats! ' + strikesCounter + ' strike(s) for you! Only ' + (remainingStrikes - strikesCounter) + 'left!');
   console.log('Incorrect! I hate cats and would never own one!');
 }
 
 // Error catch for possible loss? Not sure how to do this in a better way.
 
 if (strikesCounter >= 3) {
-  alert(strikesCounter +  ' strikes, you lose! Let\'s finish the rest of the questions just for fun anyways. ');
-} 
+  alert(strikesCounter + ' strikes, you lose! Let\'s finish the rest of the questions just for fun anyways.');
+}
 
 // Question #4 - Do you think I have lived in Seattle before?
 
@@ -84,8 +84,8 @@ if (seattleGuess === 'yes') {
 // Error catch for possible loss? Not sure how to do this in a better way.
 
 if (strikesCounter >= 3) {
-  alert(strikesCounter +  ' strikes, you lose! Let\'s finish the rest of the questions just for fun anyways. ');
-} 
+  alert(strikesCounter + ' strikes, you lose! Let\'s finish the rest of the questions just for fun anyways.');
+}
 
 // Question #5 - Do you think I eat a banana every day?
 
@@ -104,11 +104,11 @@ if (bananaGuess === 'no') {
 // Error catch for possible loss? Not sure how to do this in a better way.
 
 if (strikesCounter >= 3) {
-  alert(strikesCounter +  ' strikes, you lose! Let\'s finish the rest of the questions just for fun anyways. ');
-} 
+  alert(strikesCounter + ' strikes, you lose! Let\'s finish the rest of the questions just for fun anyways. ');
+}
 
 
-// Question #6 - Random number guessing game 
+// Question #6 - Random number guessing game
 for (var i=0; i < 4; i ++) {
   var userNumberGuess = parseInt(prompt('Guess a number between 1 & 10!'));
   if (userNumberGuess === randomNumb) {
@@ -132,14 +132,14 @@ for (var i=0; i < 4; i ++) {
 }
 
 
-    
+
 // Error catch for possible loss? Not sure how to do this in a better way.
 
 if (strikesCounter >= 3) {
-  alert(strikesCounter +  ' strikes, you lose! Let\'s finish the rest of the questions just for fun anyways. ');
-} 
+  alert(strikesCounter + ' strikes, you lose! Let\'s finish the rest of the questions just for fun anyways. ');
+}
 
-// Question #7 - Multiple choice question with an array of answers. User gets 6 guesses, use a counter to keep track of guesses. If they don't get it after 6 guesses, display message with a list of possible correct answers. 
+// Question #7 - Multiple choice question with an array of answers. User gets 6 guesses, use a counter to keep track of guesses. If they don't get it after 6 guesses, display message with a list of possible correct answers.
 
 var favoriteTvShows = ['star trek', 'black mirror', 'a series of unfortunate events', 'the office', 'disjointed', 'parks and recreation'];
 
@@ -167,8 +167,8 @@ for (i = 0; i < favoriteTvShows.length; i ++) {
 // Error catch for possible loss? Not sure how to do this in a better way.
 
 if (strikesCounter >= 3) {
-  alert(strikesCounter +  ' strikes, you lose! Let\'s finish the rest of the questions just for fun anyways. ');
-} 
+  alert(strikesCounter + ' strikes, you lose! Let\'s finish the rest of the questions just for fun anyways. ');
+}
 
 console.log(strikesCounter + 'strikes./3');
 console.log(pointsCounter + 'points./7');
