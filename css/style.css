@@ -9,22 +9,26 @@ h1 {
   color: red;
 }
 
-
 h2 {
   font-size: 3rem;
   text-align: center;
 }
 
+#header {
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
 .aboutMe {
-  font-size: 1.5rem;
-  padding-top: 25px;
-  padding-bottom: 75px;
+  font-size: 1.75rem;
+  padding-top: 35px;
+  padding-bottom: 35px;
   margin-right: 75px;
   margin-left: 75px;
   text-align: center;
 }
 
-.jobDescriptions {
+.jobDescriptions li {
   font-size: 2rem;
   margin-left: 75px;
   margin-right: 75px;
@@ -36,6 +40,11 @@ h2 {
   margin-left: 75px;
   margin-right: 75px;
 
+}
+
+em {
+  font-size: 2rem;
+  color: rgb(206, 123, 15);
 }
 
 .workHistory {
@@ -82,7 +91,6 @@ li {
   border: none;
   margin-right: none;
 }
-
 
 .pictures {
   border-radius: 50%;
