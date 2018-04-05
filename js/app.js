@@ -3,15 +3,14 @@
 
 
 // Ask user their name and personalize the game
+var userName = '';
+userName = prompt('Thanks for visiting! My name is Taylor, what is your name?');
 
-userName = prompt('Thanks for visiting! My name is Taylor, what is your name?')
-
-alert('Hello ' + userName + ' please answer the first 5 questions with yes/no only. Each correct answer will award 1 point. Each incorrect answer to a question will result in 1 strike. 3 strikes and you lose!');
+alert('Hello ' + userName + '! Please answer the first 5 questions with yes/no only. There are a total of 7 questions. Each correct answer will award 1 point. Each incorrect answer to a question will result in 1 strike. 3 strikes and you lose! Let\'s see how many points you can get!');
 
 var pointsCounter = 0;
 var strikesCounter = 0;
 var remainingStrikes = 3;
-var userName = ''
 var randomNumb = Math.floor((Math.random() * 10) + 1);
 console.log(randomNumb);
 var numberOfUserNumberGuess = 0;
@@ -110,23 +109,27 @@ if (strikesCounter >= 3) {
 
 
 // Question #6 - Random number guessing game 
-  for (var i=0; i < 4; i ++) {
-    var userNumberGuess = parseInt(prompt('Guess a number between 1 & 10!'));
-    if (userNumberGuess === randomNumb) {
-      alert('Correct! You nailed it! Great job, 1 more point for you!');
-      pointsCounter ++;
-      break;
-    } else if (userNumberGuess < randomNumb) {
-      numberOfUserNumberGuess ++;
-      alert('Higher! Try again!')
-    } else if (userNumberGuess > randomNumb) {
-      numberOfUserNumberGuess ++;
-      alert('Lower! Try again!')
-    } else if (numberOfUserNumberGuess >= 4) {
-      alert('Sorry you\'re all out of guesses! 1 strike for you. Maybe next time!');
-      strikesCounter ++;
-    }
+for (var i=0; i < 4; i ++) {
+  var userNumberGuess = parseInt(prompt('Guess a number between 1 & 10!'));
+  if (userNumberGuess === randomNumb) {
+    alert('Correct! You nailed it! Great job, 1 more point for you!');
+    pointsCounter ++;
+    console.log('Correct, you guessed the random number!');
+    break;
+  } else if (userNumberGuess < randomNumb) {
+    numberOfUserNumberGuess ++;
+    alert('Higher! Try again!');
+    console.log('Guess a higher number!');
+  } else if (userNumberGuess > randomNumb) {
+    numberOfUserNumberGuess ++;
+    alert('Lower! Try again!');
+    console.log('Guess a lower number!');
+  } else if (numberOfUserNumberGuess >= 4) {
+    alert('Sorry you\'re all out of guesses! 1 strike for you. Maybe next time!');
+    strikesCounter ++;
+    console.log('Sorry you didn\'t guess the right number. You\'re out of guesses!');
   }
+}
 
 
     
@@ -142,25 +145,33 @@ var favoriteTvShows = ['star trek', 'black mirror', 'a series of unfortunate eve
 
 var showGuesses = 0;
 
-for (var i = 0; i < favoriteTvShows.length; i ++) {
+for (i = 0; i < favoriteTvShows.length; i ++) {
   var tvShowGuess = prompt('Can you guess one of my favorite TV shows?');
   if (favoriteTvShows.includes(tvShowGuess)) {
     alert('Wow! How\'d you know?! You\'re reading my mind!');
     pointsCounter ++;
+    console.log('You guessed one of my favorite TV shows, good job!');
     break;
   } else if (showGuesses >= 5) {
     alert('Sorry, you\'re out of guesses! My favorite TV shows are ' + favoriteTvShows);
     strikesCounter ++;
+    console.log('Sorry you\'re out of guesses. You didn\'t guess one of my favorite TV shows.');
     break;
   }else {
     alert('Guess again!');
     showGuesses ++;
+    console.log('Guess again!');
   }
 }
 
-console.log(strikesCounter);
-console.log(pointsCounter);
+// Error catch for possible loss? Not sure how to do this in a better way.
 
-alert('Great job! You win! You just know me too well. Looks like I can\'t fool you, next time I\'ll try to think of some tougher questions!');
-//   console.log('Great job! You win! You just know me too well. Looks like I can\'t fool you, next time I\'ll try to think of some tougher questions!');
-// }
+if (strikesCounter >= 3) {
+  alert(strikesCounter +  ' strikes, you lose! Let\'s finish the rest of the questions just for fun anyways. ');
+} 
+
+console.log(strikesCounter + 'strikes./3');
+console.log(pointsCounter + 'points./7');
+
+alert('Great job ' + userName + '! You got ' + pointsCounter + 'points and ' + strikesCounter + ' strikes! You did great!');
+console.log('Great job ' + userName + '! You got ' + pointsCounter + 'points and ' + strikesCounter + ' strikes! You did great!');
