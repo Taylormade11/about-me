@@ -3,16 +3,12 @@ body {
   color: white;
 }
 
-.creepy {
-  display: flex;
-  justify-content: center;
-}
-
 h1 {
   font-size: 6rem;
   text-align: center;
-
+  color: red;
 }
+
 
 h2 {
   font-size: 3rem;
@@ -21,14 +17,59 @@ h2 {
 
 .aboutMe {
   font-size: 1.5rem;
-  margin-left: 600px;
-  margin-top: 0px;
+  padding-top: 25px;
+  padding-bottom: 75px;
+  margin-right: 75px;
+  margin-left: 75px;
   text-align: center;
-  border: none;
+}
+
+.jobDescriptions {
+  font-size: 2rem;
+  margin-left: 75px;
+  margin-right: 75px;
+}
+
+.jobs {
+  font-size: 3rem;
+  color: yellow;
+  margin-left: 75px;
+  margin-right: 75px;
+
+}
+
+.workHistory {
+  font-size: 5rem;
+  margin-left: 75px;
+  margin-right: 75px;
+  color: red;
+}
+
+.tenThingsIEnjoy {
+  font-size: 50px;
+  margin-right: 75px;
+  padding-bottom: 25px;
+  color: red;
+  
+}
+
+.firstThing {
+  padding-top: 25px;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.listOfTenThings {
+  font-size: 1.4rem;
+  text-align: left;
+  color: white;
+}
+.header {
+  text-align: center;
+
 }
 
 p {
-  margin-top: 50px;
   font-size: 2rem;
   margin-bottom: 0px;
   text-align: left;
@@ -36,21 +77,17 @@ p {
 }
 
 li {
-  font-size: 2rem;
+  font-size: 1rem;
   margin-top: 0px;
   border: none;
   margin-right: none;
 }
 
-em {
-  color: yellow;
-}
 
 .pictures {
   border-radius: 50%;
-  margin-left: 750px;
-  size: 80%;
   border: none;
-  margin-bottom: none;
+  float: left;  
+  padding: 75px;
 }
 
