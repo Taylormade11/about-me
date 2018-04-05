@@ -19,7 +19,7 @@ var numberOfUserNumberGuess = 0;
 // Question #1 - Do you think I am over the age of 20?
 var ageGuess = prompt('Do you think I am over the age of 20?').toLowerCase();
 
-if (ageGuess === 'yes') {
+if (ageGuess === 'yes' || ageGuess === 'y') {
   pointsCounter += 1;
   alert('Correct! I am 25 years old. 1 point for you! Good job!');
   console.log('Correct! I am 25 years old.');
@@ -33,7 +33,7 @@ if (ageGuess === 'yes') {
 
 var childrenGuess = prompt('Do I have any children?').toLowerCase();
 
-if (childrenGuess === 'yes') {
+if (childrenGuess === 'yes' || ageGuess === 'y') {
   pointsCounter += 1;
   alert('Correct! I have a 7 year old son. 1 point for you. You have ' + pointsCounter + ' points, keep it up!');
   console.log('Correct! I have a 7 year old son. Keep it up!');
@@ -47,7 +47,7 @@ if (childrenGuess === 'yes') {
 
 var catsGuess = prompt('Do you think I have any cats?').toLowerCase();
 
-if (catsGuess === 'no') {
+if (catsGuess === 'no' || ageGuess === 'n') {
   pointsCounter += 1;
   alert('Correct! I hate cats! 1 point for you! You have ' + pointsCounter + ' points, you\'re doing great!');
   console.log('Correct! I hate cats!');
@@ -67,7 +67,7 @@ if (strikesCounter >= 3) {
 
 var seattleGuess = prompt('Do you think I have lived in Seattle before?').toLowerCase();
 
-if (seattleGuess === 'yes') {
+if (seattleGuess === 'yes' || ageGuess === 'y') {
   pointsCounter += 1;
   alert('Correct! I lived here about 2 years ago. 1 point for you! You have ' + pointsCounter + ' points, I just can\'t fool you!');
   console.log('Correct! I lived here about 2 years ago and am just moving back!');
@@ -91,7 +91,7 @@ if (strikesCounter >= 3) {
 
 var bananaGuess = prompt('Do you think I eat a banana every day?').toLowerCase();
 
-if (bananaGuess === 'no') {
+if (bananaGuess === 'no' || ageGuess === 'n') {
   pointsCounter += 1;
   alert('Correct! I can\'t eat a banana without yacking! I drink 1 every day though! 1 point for you! You have ' + pointsCounter + ' points, you\'re doing amazing!');
   console.log('Correct! I can\'t eat a banana without yacking! I drink 1 every day though!');
