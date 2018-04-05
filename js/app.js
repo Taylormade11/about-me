@@ -10,7 +10,9 @@ alert('Hello ' + userName + '! Please answer the first 5 questions with yes/no o
 
 var pointsCounter = 0;
 var strikesCounter = 0;
-var remainingStrikes = 3;
+
+function fiveQuestion(remainingStrikes) {
+//var remainingStrikes = 3;
 var randomNumb = Math.floor((Math.random() * 10) + 1);
 console.log(randomNumb);
 var numberOfUserNumberGuess = 0;
@@ -28,6 +30,9 @@ if (ageGuess === 'yes' || ageGuess === 'y') {
   alert('Incorrect! I am 25 years old! ' + strikesCounter + ' strike(s) for you! Only ' + (remainingStrikes - strikesCounter) + ' left!');
   console.log('Incorrect! I am 25 years old!');
 }
+
+
+
 
 // Question #2 - Do I have any children?
 
@@ -106,9 +111,12 @@ if (bananaGuess === 'no' || ageGuess === 'n') {
 if (strikesCounter >= 3) {
   alert(strikesCounter + ' strikes, you lose! Let\'s finish the rest of the questions just for fun anyways. ');
 }
+}
+fiveQuestion(2);
 
+//Question #6 - Random number guessing game
+function questionSix() {
 
-// Question #6 - Random number guessing game
 for (var i=0; i < 4; i ++) {
   var userNumberGuess = parseInt(prompt('Guess a number between 1 & 10!'));
   if (userNumberGuess === randomNumb) {
@@ -131,6 +139,8 @@ for (var i=0; i < 4; i ++) {
   }
 }
 
+}
+questionSix();
 
 
 // Error catch for possible loss? Not sure how to do this in a better way.
@@ -141,9 +151,11 @@ if (strikesCounter >= 3) {
 
 // Question #7 - Multiple choice question with an array of answers. User gets 6 guesses, use a counter to keep track of guesses. If they don't get it after 6 guesses, display message with a list of possible correct answers.
 
+
+function questionSeven(showGuesses) {
 var favoriteTvShows = ['star trek', 'black mirror', 'a series of unfortunate events', 'the office', 'disjointed', 'parks and recreation'];
 
-var showGuesses = 0;
+//var showGuesses = 0;
 
 for (i = 0; i < favoriteTvShows.length; i ++) {
   var tvShowGuess = prompt('Can you guess one of my favorite TV shows?');
@@ -164,6 +176,8 @@ for (i = 0; i < favoriteTvShows.length; i ++) {
   }
 }
 
+}
+questionSeven(0)
 // Error catch for possible loss? Not sure how to do this in a better way.
 
 if (strikesCounter >= 3) {
