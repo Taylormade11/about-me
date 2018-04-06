@@ -1,10 +1,16 @@
 'use strict';
 
 
-// Ask user their name and personalize the game
 var userName = 'Anonymous';
 var pointsCounter = 0;
 var strikesCounter = 0;
+var showGuesses = 0;
+var numberOfUserNumberGuess = 0;
+var randomNumb = Math.floor((Math.random() * 10) + 1);
+console.log('Random # is ' + randomNumb);
+var favoriteTvShows = ['star trek', 'black mirror', 'a series of unfortunate events', 'the office', 'disjointed', 'parks and recreation'];
+
+// Ask user their name and personalize the game
 
 function greetUser() {
   userName = prompt('Thanks for visiting! My name is Taylor, what is your name?');
@@ -20,6 +26,7 @@ function outOfStrikes() {
 
 function fiveQuestions(remainingStrikes) {
   // Question #1 - Do you think I am over the age of 20?
+
   var ageGuess = prompt('Do you think I am over the age of 20?').toLowerCase();
 
   if (ageGuess === 'yes' || ageGuess === 'y') {
@@ -58,6 +65,7 @@ function fiveQuestions(remainingStrikes) {
     strikesCounter += 1;
     alert('Incorrect! I hate cats! ' + strikesCounter + ' strike(s) for you! Only ' + (remainingStrikes - strikesCounter) + ' left!');
     console.log('Incorrect! I hate cats and would never own one!');
+    outOfStrikes();
   }
 
   // Question #4 - Do you think I have lived in Seattle before?
@@ -72,10 +80,7 @@ function fiveQuestions(remainingStrikes) {
     strikesCounter += 1;
     alert('Incorrect! I lived here about 2 years ago. ' + strikesCounter + ' strike(s) for you! Only ' + (remainingStrikes - strikesCounter) + ' left!');
     console.log('Incorrect! I lived here about 2 years ago and am just moving back!');
-  } else {
-    strikesCounter += 1;
-    alert('Incorrect! I lived here about 2 years ago. ' + strikesCounter + ' strike(s) for you! You can do better than that! You\'ll get the last one for sure!');
-    console.log('Incorrect! I lived here about 2 years ago and am just moving back!');
+    outOfStrikes();
   }
 
   // Question #5 - Do you think I eat a banana every day?
@@ -90,14 +95,14 @@ function fiveQuestions(remainingStrikes) {
     strikesCounter += 1;
     alert('Incorrect! I can\'t eat a banana, the texture makes me yack! I drink one every day though! ' + strikesCounter + ' strike(s) for you! Only ' + (remainingStrikes - strikesCounter) + ' left!');
     console.log('Incorrect! I can\'t eat a banana, the texture makes me yack! I drink one every day though!');
+    outOfStrikes();
   }
 }
 
 // Question #6 - Random number guessing game
+
 function questionSix() {
-  var numberOfUserNumberGuess = 0;
-  var randomNumb = Math.floor((Math.random() * 10) + 1);
-  console.log('Random # is ' + randomNumb);
+
   for (var i=0; i < 4; i ++) {
     var userNumberGuess = parseInt(prompt('Guess a number between 1 & 10!'));
     if (userNumberGuess === randomNumb) {
@@ -117,18 +122,14 @@ function questionSix() {
       alert('Sorry you\'re all out of guesses! 1 strike for you. Maybe next time!');
       strikesCounter ++;
       console.log('Sorry you didn\'t guess the right number. You\'re out of guesses!');
+      outOfStrikes();
     }
   }
 }
 
-// Question #7 - Multiple choice question with an array of answers. User gets 6 guesses, use a counter to keep track of guesses. If they don't get it after 6 guesses, display message with a list of possible correct answers.
-
+// Question #7 - Multiple choice question with an array of answers. User gets 6 guesses.
 
 function questionSeven() {
-  var favoriteTvShows = ['star trek', 'black mirror', 'a series of unfortunate events', 'the office', 'disjointed', 'parks and recreation'];
-
-  var showGuesses = 0;
-
   for (var i = 0; i < favoriteTvShows.length; i ++) {
     var tvShowGuess = prompt('Can you guess one of my favorite TV shows?').toLowerCase();
     if (favoriteTvShows.includes(tvShowGuess)) {
@@ -140,6 +141,7 @@ function questionSeven() {
       alert('Sorry, you\'re out of guesses! My favorite TV shows are ' + favoriteTvShows);
       strikesCounter ++;
       console.log('Sorry you\'re out of guesses. You didn\'t guess one of my favorite TV shows.');
+      outOfStrikes();
       break;
     }else {
       alert('Guess again!');
@@ -152,7 +154,6 @@ function questionSeven() {
 function farewellUser() {
   console.log(strikesCounter + ' strikes/3');
   console.log(pointsCounter + ' points/7');
-
   alert('Great job ' + userName + '! You got ' + pointsCounter + ' points and ' + strikesCounter + ' strikes! You did great!');
   console.log('Great job ' + userName + '! You got ' + pointsCounter + ' points and ' + strikesCounter + ' strikes! You did great!');
 }
@@ -161,9 +162,6 @@ function farewellUser() {
 
 greetUser(userName);
 fiveQuestions(3);
-outOfStrikes();
 questionSix();
-outOfStrikes();
 questionSeven();
-outOfStrikes();
 farewellUser();
